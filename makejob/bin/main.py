@@ -44,7 +44,7 @@ def cli(**kwargs):
 
     base_scheds = '-V -cwd'
     if queues:
-        base_scheds += ' -q' + ' -q '.join(queues)
+        base_scheds += ' -q ' + ' -q '.join(queues)
 
     job_list, order_list = make_job(configfile.name, base_scheds)
     click.secho(f'total jobs: {len(job_list)}', fg='green')
